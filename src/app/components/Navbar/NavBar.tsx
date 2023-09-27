@@ -12,12 +12,12 @@ import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <Navbar height="80px">
+    <Navbar height="80px" maxWidth='full'>
       {" "}
       {/* Ajusta la altura aquí */}
       <NavbarBrand>
         <Link href="/">
-          <Image width={150} height={120} src="/logo.png" alt="Default Image" />{" "}
+          <Image width={150} height={200} src="/logo.png" alt="Default Image" />{" "}
           {/* Ajusta el tamaño de la imagen aquí */}
         </Link>
       </NavbarBrand>
