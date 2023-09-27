@@ -4,7 +4,7 @@ const BannerInfoContact = () => {
   return (
     <div
       className="flex items-center w-[100%] h-[600px] bg-cover bg-center relative "
-      style={{ backgroundImage: "url('/bannerhome2.jpg')" }}
+      style={{ backgroundImage: "url('/banners/bannerspace4.jpg')" }}
     >
       <div className="absolute inset-0 "></div>
       <div className="p-6">
