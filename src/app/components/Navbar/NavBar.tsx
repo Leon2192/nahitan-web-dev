@@ -9,10 +9,23 @@ import {
 } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
+import Typewriter from "typewriter-effect";
 
 export default function NavBar() {
+  <Typewriter
+    options={{
+      strings: ["Texto de ejemplo"],
+      autoStart: true,
+      loop: true,
+    }}
+    onInit={(typewriter) => {
+      typewriter
+        .typeString("Este es el texto que se escribirá en el efecto")
+        .start();
+    }}
+  />;
   return (
-    <Navbar height="80px" maxWidth='full'>
+    <Navbar height="80px" maxWidth="full">
       {" "}
       {/* Ajusta la altura aquí */}
       <NavbarBrand>
@@ -35,7 +48,15 @@ export default function NavBar() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">nahitanweb@gmail.com</Link>
+          <Link href="#">
+            <Typewriter
+              options={{
+                strings: ["Cotizá tu proyecto por whatsapp"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </Link>
         </NavbarItem>
       </NavbarContent>
     </Navbar>
