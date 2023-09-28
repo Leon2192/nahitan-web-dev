@@ -51,7 +51,7 @@ const Slider = () => {
             options={{
               strings: [
                 "Le damos vida a tus proyectos",
-                "Posicionamos tu marca",
+                "Implementamos y potenciamos tus ideas",
                 "Hacemos que tu negocio ¡Despegue!🚀",
               ],
               autoStart: true,
