@@ -51,7 +51,7 @@ export default function NavBar() {
           <Link href="#">
             <Typewriter
               options={{
-                strings: ["Cotizá tu proyecto por whatsapp"],
+                strings: ["¡Cotizá tu proyecto por whatsapp!"],
                 autoStart: true,
                 loop: true,
               }}
