@@ -1,6 +1,21 @@
 "use client";
 import React from "react";
+import Typewriter from "typewriter-effect";
+
 const Slider = () => {
+  <Typewriter
+    options={{
+      strings: ["Texto de ejemplo"],
+      autoStart: true,
+      loop: true,
+    }}
+    onInit={(typewriter) => {
+      typewriter
+        .typeString("Este es el texto que se escribirá en el efecto")
+        .start();
+    }}
+  />;
+
   return (
     <div
       className="flex items-center w-[100%] h-[700px] bg-cover bg-center relative"
@@ -32,7 +47,17 @@ const Slider = () => {
             color: "#fcf6bd",
           }}
         >
-          Damos vida a tu proyecto
+          <Typewriter
+            options={{
+              strings: [
+                "Damos vida a tus proyectos",
+                "Posicionamos tu marca",
+                "Hacemos que tu negocio ¡Despegue!🚀",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </h4>
       </div>
     </div>
