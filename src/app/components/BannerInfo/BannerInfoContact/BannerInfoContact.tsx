@@ -3,7 +3,7 @@ import React from "react";
 const BannerInfoContact = () => {
   return (
     <div
-      className="flex items-center w-[100%] h-[600px] bg-cover bg-center relative "
+      className="flex items-center w-[100%] h-[600px] bg-cover bg-center relative"
       style={{ backgroundImage: "url('/banners/bannerspace4.jpg')" }}
     >
       <div className="absolute inset-0 "></div>

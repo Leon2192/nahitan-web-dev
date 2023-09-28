@@ -4,10 +4,11 @@ const BannerInfo = () => {
   return (
     <div
       className="flex items-center w-[100%] h-[600px] bg-cover bg-center relative "
-      style={{ backgroundImage: "url('/banners/bannerspace.jpg')" }}
+      style={{ backgroundImage: "url('/rocketright.jpg')" }}
     >
-      <div className="absolute inset-0 "></div>
+      <div className="absolute inset-0"></div>
       <div className="p-6">
+      
         <h2
           className="text-white text-5xl font-bold"
           style={{
@@ -20,7 +21,7 @@ const BannerInfo = () => {
         <h4
           className="text-white text-3xl font-bold"
           style={{
-            width: "80%",
+            width: "70%",
           }}
         >
           Trabajamos en diversos proyectos tanto para las mejores marcas, como

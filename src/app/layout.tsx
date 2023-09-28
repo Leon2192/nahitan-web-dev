@@ -5,6 +5,8 @@ import NavBar from "./components/Navbar/NavBar";
 import Footer from "./components/Footer/Footer";
 import { NextUIProvider } from "@nextui-org/react";
 
+const whatsappURL = "https://wa.me/1127682286";
+
 const inter = Inter({ subsets: ["latin"] });
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
@@ -24,10 +26,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/logo.png" sizes="any" />
       <body className={robotoMono.className}>
         <NavBar />
         {children}
         <Footer />
+        {/* Boton de whatsapp */}
+        <a
+          href={whatsappURL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed right-4 bottom-4"
+        >
+          <img src="/whatsapp.png" alt="WhatsApp" width="65" height="65" />
+        </a>
       </body>
     </html>
   );

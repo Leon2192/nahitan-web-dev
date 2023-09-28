@@ -1,11 +1,23 @@
-import React from "react";
-import { LiaPagerSolid } from "react-icons/lia"; // Reemplaza con los iconos que desees
+// Importa los módulos necesarios
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { LiaPagerSolid } from "react-icons/lia";
 import { MdWorkspacePremium } from "react-icons/md";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Cards = () => {
+  const [ref, inView] = useInView();
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, scale: 1 });
+    }
+  }, [controls, inView]);
+
   return (
-    <div className="text-center mb-10 h-[500px]">
+    <div ref={ref} className="text-center mb-10 h-[500px]">
       <h1 className="text-6xl font-semibold mt-6 mb-4">Nuestros servicios</h1>
       <br />
       <br />
@@ -13,7 +25,12 @@ const Cards = () => {
         <div className="bg-white h-1 w-20 rounded-full"></div>
       </div>
       <div className="flex justify-between">
-        <div className="w-1/3 p-4">
+        <motion.div
+          className="w-1/3 p-4"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={controls}
+          transition={{ duration: 0.5 }}
+        >
           <div className="text-center">
             <LiaPagerSolid className="text-9xl text-blue-500 mb-4 mx-auto" />
             <p className="text-4xl font-semibold mb-4">Landing Page</p>
@@ -22,8 +39,13 @@ const Cards = () => {
               solución perfecta para destacar en línea y captar leads.
             </p>
           </div>
-        </div>
-        <div className="w-1/3 p-4">
+        </motion.div>
+        <motion.div
+          className="w-1/3 p-4"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={controls}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <div className="text-center">
             <MdWorkspacePremium className="text-9xl text-green-500 mb-4 mx-auto" />
             <p className="text-4xl font-semibold mb-4">Diseño Web Premium</p>
@@ -33,8 +55,13 @@ const Cards = () => {
               Con una combinación perfecta de creatividad y experiencia técnica.
             </p>
           </div>
-        </div>
-        <div className="w-1/3 p-4">
+        </motion.div>
+        <motion.div
+          className="w-1/3 p-4"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={controls}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           <div className="text-center">
             <AiOutlineShoppingCart className="text-9xl text-red-500 mb-4 mx-auto" />
             <p className="text-4xl font-semibold mb-4">Diseño web Full</p>
@@ -44,7 +71,7 @@ const Cards = () => {
               nivel para convertirse en un poderoso portal de ventas.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
