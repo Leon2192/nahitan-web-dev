@@ -40,7 +40,7 @@ const Slider = () => {
           Diseño y Desarrollo Web
         </h2>
         <br />
-        <h4
+        <h2
           className="text-white text-3xl font-bold"
           style={{
             width: "100%",
@@ -50,7 +50,7 @@ const Slider = () => {
           <Typewriter
             options={{
               strings: [
-                "Damos vida a tus proyectos",
+                "Le damos vida a tus proyectos",
                 "Posicionamos tu marca",
                 "Hacemos que tu negocio ¡Despegue!🚀",
               ],
@@ -58,7 +58,7 @@ const Slider = () => {
               loop: true,
             }}
           />
-        </h4>
+        </h2>
       </div>
     </div>
   );
