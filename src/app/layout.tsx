@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import NavBar from "./components/Navbar/NavBar";
 import Footer from "./components/Footer/Footer";
-import { NextUIProvider } from "@nextui-org/react";
 
 const whatsappURL = "https://wa.me/1127682286";
 
