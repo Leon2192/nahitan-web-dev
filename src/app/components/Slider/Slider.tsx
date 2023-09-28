@@ -43,7 +43,7 @@ const Slider = () => {
         <h4
           className="text-white text-3xl font-bold"
           style={{
-            width: "75%",
+            width: "100%",
             color: "#fcf6bd",
           }}
         >
