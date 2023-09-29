@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -8,7 +8,7 @@ import { BiTimeFive } from "react-icons/bi";
 
 const CardsAbout = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true, // La animación se ejecutará solo una vez
+    triggerOnce: true,
   });
 
   const cardVariants = {
@@ -40,9 +40,9 @@ const CardsAbout = () => {
         <div className="bg-white h-1 w-60 rounded-full"></div>
       </div>
       <br />
-      <div className="flex justify-between">
+      <div className="flex flex-col md:flex-row md:justify-between">
         <motion.div
-          className="w-1/3 p-4"
+          className="w-full md:w-1/3 p-4"
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? "visible" : "hidden"}
@@ -59,7 +59,7 @@ const CardsAbout = () => {
           </div>
         </motion.div>
         <motion.div
-          className="w-1/3 p-4"
+          className="w-full md:w-1/3 p-4"
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? "visible" : "hidden"}
@@ -76,7 +76,7 @@ const CardsAbout = () => {
           </div>
         </motion.div>
         <motion.div
-          className="w-1/3 p-4"
+          className="w-full md:w-1/3 p-4"
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? "visible" : "hidden"}

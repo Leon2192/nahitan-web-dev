@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const InfoAbout = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // La animación se ejecutará solo una vez
+    triggerOnce: true,
   });
 
   const containerVariants = {
@@ -31,13 +31,11 @@ const InfoAbout = () => {
   };
 
   return (
-    <div className="flex items-center mt-20" ref={ref}>
-      <motion.div
-        className="w-1/2 text-center ml-5"
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-      >
+    <div
+      className="flex flex-col md:flex-row items-center mt-20 mb-20"
+      ref={ref}
+    >
+      <div className="w-full md:w-1/2 text-center ml-5">
         <motion.p className="text-5xl font-semibold" variants={textVariants}>
           Misión
         </motion.p>
@@ -70,20 +68,15 @@ const InfoAbout = () => {
           Con cada proyecto, nos acercamos un paso más a nuestra visión de un
           mundo digital impresionante y de calidad excepcional.
         </motion.p>
-      </motion.div>
-      <motion.div
-        className="w-1/2 text-center"
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-      >
+      </div>
+      <div className="w-full md:w-1/2 text-center">
         <motion.img
           src="/logo.png"
           alt="Imagen"
           className="mx-auto"
           variants={textVariants}
         />
-      </motion.div>
+      </div>
     </div>
   );
 };

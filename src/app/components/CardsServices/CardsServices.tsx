@@ -8,17 +8,17 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const CardsServices = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true, // La animación se activará una sola vez
-    threshold: 0.2, // La animación se activará cuando el 20% del componente sea visible
+    triggerOnce: true,
+    threshold: 0.2,
   });
 
   return (
     <div className="text-center">
       <h1 className="text-5xl font-semibold mt-6 mb-4">Nuestros planes</h1>
-      <div className="flex justify-between">
+      <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0">
         <motion.div
           ref={ref}
-          className={`w-1/3 p-4 ${inView ? "animate__fadeIn" : ""}`}
+          className={`w-full md:w-1/3 p-4 ${inView ? "animate__fadeIn" : ""}`}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.5 }}
@@ -34,10 +34,10 @@ const CardsServices = () => {
         </motion.div>
         <motion.div
           ref={ref}
-          className={`w-1/3 p-4 ${inView ? "animate__fadeIn" : ""}`}
+          className={`w-full md:w-1/3 p-4 ${inView ? "animate__fadeIn" : ""}`}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }} // Cambia el delay para diferentes tarjetas
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="text-center">
             <MdWorkspacePremium className="text-8xl text-green-500 mb-4 mx-auto" />
@@ -51,10 +51,10 @@ const CardsServices = () => {
         </motion.div>
         <motion.div
           ref={ref}
-          className={`w-1/3 p-4 ${inView ? "animate__fadeIn" : ""}`}
+          className={`w-full md:w-1/3 p-4 ${inView ? "animate__fadeIn" : ""}`}
           initial={{ opacity: 0, scale: 0.5 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.5, delay: 0.4 }} // Cambia el delay para diferentes tarjetas
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           <div className="text-center">
             <AiOutlineShoppingCart className="text-8xl text-red-500 mb-4 mx-auto" />

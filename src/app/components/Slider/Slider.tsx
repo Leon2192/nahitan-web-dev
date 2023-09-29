@@ -3,30 +3,19 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 
 const Slider = () => {
-  <Typewriter
-    options={{
-      strings: ["Texto de ejemplo"],
-      autoStart: true,
-      loop: true,
-    }}
-    onInit={(typewriter) => {
-      typewriter
-        .typeString("Este es el texto que se escribirá en el efecto")
-        .start();
-    }}
-  />;
-
   return (
     <div
-      className="flex items-center w-[100%] h-[700px] bg-cover bg-center relative"
+      className="flex items-center bg-cover bg-center relative"
       style={{ backgroundImage: "url('/bannerhome2.jpg')" }}
     >
       <div className="absolute inset-0 "></div>
-      <div className="p-6 mt-40">
+      <div className="p-6 md:mt-48">
+        {" "}
+        {/* Aumentamos el valor de md:mt */}
         <br />
         <br />
         <h2
-          className="text-white text-6xl font-bold mt-20"
+          className="text-white text-6xl font-bold mt-10 md:mt-20"
           style={{
             color: "#90e0ef",
           }}
@@ -41,7 +30,7 @@ const Slider = () => {
         </h2>
         <br />
         <h2
-          className="text-white text-3xl font-bold"
+          className="text-white text-3xl font-bold mt-5"
           style={{
             width: "100%",
             color: "#fcf6bd",

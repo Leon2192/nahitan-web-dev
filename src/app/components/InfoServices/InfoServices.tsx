@@ -5,26 +5,25 @@ import { useInView } from "react-intersection-observer";
 
 const InfoServices = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true, // La animación se activará una sola vez
-    threshold: 0.2, // La animación se activará cuando el 20% del componente sea visible
+    triggerOnce: true,
+    threshold: 0.2,
   });
 
   return (
-    <div className="flex items-center">
+    <div className="flex flex-col items-center md:flex-row md:items-center">
       <div
-        className={`w-1/2 text-center ${inView ? "animate__fadeInLeft" : ""}`}
+        className={`w-full md:w-1/2 text-center ${
+          inView ? "animate__fadeIn" : ""
+        }`}
         ref={ref}
       >
         <img src="/logo.png" alt="Imagen" className="mx-auto" />
       </div>
       <motion.div
-        className={`w-1/2 text-center mr-20 ${
-          inView ? "animate__fadeInRight" : ""
+        className={`w-full md:w-1/2 text-center mt-4 md:mt-0 ${
+          inView ? "animate__fadeIn" : ""
         }`}
         ref={ref}
-        initial={{ opacity: 0, x: -50 }}
-        animate={inView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.5 }}
       >
         <p className="text-4xl font-semibold">Nos enfocamos en la excelencia</p>
         <br />

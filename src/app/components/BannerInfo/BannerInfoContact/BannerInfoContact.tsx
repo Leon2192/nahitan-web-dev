@@ -11,12 +11,12 @@ const BannerInfoContact = () => {
   return (
     <motion.div
       ref={ref}
-      className="flex items-center w-[100%] h-[600px] bg-cover bg-center relative"
+      className="flex flex-col items-center md:flex-row md:items-center w-[100%] h-[600px] bg-cover bg-center relative"
       style={{ backgroundImage: "url('/banners/bannerspace4.jpg')" }}
     >
       <div className="absolute inset-0"></div>
       <motion.div
-        className="p-6"
+        className="p-6 text-center md:text-left"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
         transition={{ duration: 1 }}
@@ -33,7 +33,7 @@ const BannerInfoContact = () => {
         <motion.h4
           className="text-white text-2xl font-bold"
           style={{
-            width: "75%",
+            width: "100%", // Cambiamos el ancho al 100% para dispositivos móviles
           }}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -20 }}

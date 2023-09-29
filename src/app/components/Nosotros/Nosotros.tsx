@@ -10,13 +10,13 @@ const Nosotros = () => {
   return (
     <motion.div
       ref={ref}
-      className="h-[500px] p-6 flex flex-col justify-center text-center"
+      className="p-6 text-center"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
       transition={{ duration: 1 }}
     >
       <h3
-        className="text-6xl font-bold"
+        className="text-4xl md:text-6xl font-bold"
         style={{
           color: "#aacc00",
         }}
@@ -25,7 +25,7 @@ const Nosotros = () => {
       </h3>
       <br />
       <motion.h4
-        className="text-2xl font-semibold mb-2"
+        className="text-xl md:text-2xl font-semibold mb-2"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -20 }}
         transition={{ duration: 1, delay: 0.5 }}
@@ -37,21 +37,20 @@ const Nosotros = () => {
       </motion.h4>
       <br />
       <div className="flex justify-center items-center mb-2">
-        <div className="bg-white h-1 w-10 rounded-full"></div>
+        <div className="bg-white h-1 w-6 md:w-10 rounded-full"></div>
       </div>
       <br />
       <motion.h5
-        className="text-3xl font-medium mb-4"
+        className="text-xl md:text-3xl font-medium mb-4"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -20 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
         Nuestra Pasión por el Diseño y la Tecnología
       </motion.h5>
-
       <br />
       <motion.p
-        className="text-lg"
+        className="text-sm md:text-lg"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -20 }}
         transition={{ duration: 1, delay: 0.5 }}

@@ -1,22 +1,22 @@
-'use client'
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const BannerInfoAbout = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true, // La animación se ejecutará solo una vez
+    triggerOnce: true,
   });
 
   return (
     <motion.div
       ref={ref}
-      className="flex items-center w-[100%] h-[600px] bg-cover bg-center relative"
+      className="flex items-center w-[100%] md:h-[600px] bg-cover bg-center relative"
       style={{ backgroundImage: "url('/pcright.jpg')" }}
     >
       <div className="absolute inset-0"></div>
       <motion.div
-        className="p-6"
+        className="p-6 md:w-1/2"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
         transition={{ duration: 1 }}
@@ -31,10 +31,7 @@ const BannerInfoAbout = () => {
         </h2>
         <br />
         <motion.h4
-          className="text-white text-2xl font-bold"
-          style={{
-            width: "60%",
-          }}
+          className="text-white text-2xl font-bold md:w-4/5"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -20 }}
           transition={{ duration: 1, delay: 0.5 }}
