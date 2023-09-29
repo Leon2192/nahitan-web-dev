@@ -4,7 +4,7 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import NavBar from "./components/Navbar/NavBar";
 import Footer from "./components/Footer/Footer";
 
-const whatsappURL = "https://wa.me/1127682286";
+const whatsappURL = "https://wa.me/+541127682286";
 
 const inter = Inter({ subsets: ["latin"] });
 const robotoMono = Roboto_Mono({
